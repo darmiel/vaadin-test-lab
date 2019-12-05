@@ -1,6 +1,6 @@
 language: java
 script: 'clean test package spring-boot:repackage -Pproduction -f pom.xml'
-jdk: oraclejdk8
+jdk: oraclejdk9
 
 #deploy:
 #  - provider:
