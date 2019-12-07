@@ -45,7 +45,7 @@ public class UserReader {
         // Try to guess password
         try {
             // Default
-            System.out.println(user.password.substring(user.password.lastIndexOf("=")).length());
+            // System.out.println(user.password.substring(user.password.lastIndexOf("=")).length());
             if(user.password.contains("=")
                 && user.password.substring(user.password.lastIndexOf("=") + 1).length() == 5) {
                 user.password = new SimpleDateFormat("ddMMyyyy '(default)'").format(user.birthDay);
@@ -53,7 +53,7 @@ public class UserReader {
                 user.password = LANiSDecrypt.decryptLine(user.password);
             }
         } catch (Throwable t) {
-            System.out.println("Can't guess password for " + user.firstName + " " + user.lastName);
+            // System.out.println("Can't guess password for " + user.firstName + " " + user.lastName);
         }
 
 
